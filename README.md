@@ -11,18 +11,28 @@ Vulnerability research and reverse engineering across open-source developer tool
 | Advisory | Severity | Class | Project |
 |---|---|---|---|
 | [GHSA-79wm-x847-7cvg](https://github.com/davila7/claude-code-templates/security/advisories/GHSA-79wm-x847-7cvg) | **High · 8.8** | Unauthenticated OS command injection → RCE | claude-code-templates |
+| [GHSA-6c66-jp8x-q8w8](https://github.com/marcusquinn/aidevops/security/advisories/GHSA-6c66-jp8x-q8w8) | **High · 7.6** | Unauthenticated `0.0.0.0` bind + fail-open auth → SSRF proxy / process spawn | aidevops |
 | [GHSA-4cfr-w3v5-w5j5](https://github.com/Dicklesworthstone/destructive_command_guard/security/advisories/GHSA-4cfr-w3v5-w5j5) | **High · 7.1** | Algorithmic-complexity fail-open guard bypass | destructive_command_guard |
 
 <sub>CVE IDs pending assignment.</sub>
 
 ## Accepted — Pending Publication
 
-Reported and **credit accepted**; advisories in the maintainer's publication pipeline.
+Reported and **credit accepted**; advisories in the maintainers' publication pipeline.
 
 | Project | Severity | Class |
 |---|---|---|
-| MLflow | High | Broken access control — Job-API RBAC bypass (CWE-862) |
-| Label Studio | High | Cross-organization IDOR |
+| eigent | **Critical · 9.6** | Unauthenticated drive-by RCE — agent workforce runs with no auth under wildcard CORS |
+| dimOS (dimensionalOS) | High · 8.8 | Unauthenticated agent-skill execution via wildcard CORS (drive-by / RCE) |
+| avo | High · 8.8 | Media Library broken access control (IDOR) |
+| Label Studio | High · 8.3 | Cross-organization IDOR — read/modify/delete across orgs |
+| MLflow | High · 7.6 | Broken access control — Job-API RBAC bypass (CWE-862) |
+| opencode | High · 7.0 | Command-approval bypass — `git -c` gadget executes arbitrary commands |
+| Ghidra | Medium · 5.5 | PEF loader infinite-loop DoS on crafted binary import |
+
+## Upstream Security Contributions
+
+- **hermes-agent** (Nous Research) — hardened the auto-approve edit gate against a multi-file patch bypass; fix + regression tests submitted ([PR #63438](https://github.com/NousResearch/hermes-agent/pull/63438)).
 
 ## Reverse Engineering & Platform Research
 
