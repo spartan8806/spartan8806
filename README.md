@@ -15,22 +15,7 @@ Vulnerability research and reverse engineering across open-source developer tool
 | [GHSA-4cfr-w3v5-w5j5](https://github.com/Dicklesworthstone/destructive_command_guard/security/advisories/GHSA-4cfr-w3v5-w5j5) | **High · 7.1** | Algorithmic-complexity fail-open guard bypass | destructive_command_guard |
 | [GHSA-25rm-9wvm-m38v](https://github.com/aszepieniec/falcon-rust/security/advisories/GHSA-25rm-9wvm-m38v) | **Medium · 5.9** | Post-quantum cryptography — discrete-Gaussian sampler precision below Falcon's security threshold | falcon-rust |
 
-<sub>CVE IDs pending assignment. falcon-rust also has a related follow-up advisory ([GHSA-67r5-83rq-qj5p](https://github.com/aszepieniec/falcon-rust/security/advisories/GHSA-67r5-83rq-qj5p)) reporting that the initial sampler-precision fix was incomplete.</sub>
-
-## Accepted — Pending Publication
-
-Reported and **credit accepted**; advisories in the maintainers' publication pipeline.
-
-| Project | Severity | Class |
-|---|---|---|
-| eigent | **Critical · 9.6** | Unauthenticated drive-by RCE — agent workforce runs with no auth under wildcard CORS |
-| dimOS (dimensionalOS) | High · 8.8 | Unauthenticated agent-skill execution via wildcard CORS (drive-by / RCE) |
-| avo | High · 8.8 | Media Library broken access control (IDOR) |
-| Label Studio | High · 8.3 | Cross-organization IDOR — read/modify/delete across orgs |
-| MLflow | High · 7.6 | Broken access control — Job-API RBAC bypass (CWE-862) |
-| crypto-js | High | Cryptographic weakness — string-password AES uses single-iteration MD5 KDF, enabling offline brute-force |
-| opencode | High · 7.0 | Command-approval bypass — `git -c` gadget executes arbitrary commands |
-| Ghidra | Medium · 5.5 | PEF loader infinite-loop DoS on crafted binary import |
+<sub>CVE IDs pending assignment. Additional advisories are in coordinated disclosure and will be listed here once published.</sub>
 
 ## Upstream Security Contributions
 
