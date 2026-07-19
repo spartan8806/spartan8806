@@ -27,6 +27,13 @@ Vulnerability research and reverse engineering across open-source developer tool
 - **Windows** — local privilege escalation and kernel/driver research (MSRC; ZDI pipeline).
 - **Focus areas** — memory corruption, TOCTOU / logic flaws, cryptanalysis, firmware RE.
 
+## Reported & Fixed
+
+Security issues reported and fixed upstream — accepted and patched by maintainers:
+
+- **redis-py** — plaintext password disclosure via `ConnectionPool.__repr__` (CWE-532) — [#3993](https://github.com/redis/redis-py/issues/3993), fixed
+- **tomlkit** — uncontrolled-recursion DoS in `parser.py` (CWE-674) — [#459](https://github.com/python-poetry/tomlkit/issues/459), fixed
+
 ---
 
 <sub>Disclosure done cleanly: reported privately where a channel exists, fixes contributed upstream, no public 0-day drops.</sub>
