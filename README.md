@@ -18,22 +18,21 @@ Vulnerability research and reverse engineering across open-source developer tool
 
 <sub>CVE IDs pending assignment. Additional advisories are in coordinated disclosure and will be listed here once published.</sub>
 
-## Upstream Security Contributions
+## Upstream Security Fixes
 
+Defects found, reported, and fixed upstream — credited by maintainers via commit, PR, or issue. The reporting channel differs from the advisories above; the work does not.
+
+- **libpqc-dyber** (Dyber, post-quantum crypto) — reported an FN-DSA / Falcon `BerExp` sampler precision violation (the `exp(-x)` approximation fell below the ~2⁻⁴⁰ Rényi-divergence floor the security proof requires), plus constant-time hardening; fixed and credited as reporter ([commit `b012e00`](https://github.com/dyber-pqc/libpqc-dyber/commit/b012e00)).
+- **wigolo** (KnockOutEZ — local-first web-fetch MCP for AI agents) — hardened an SSRF fetch path against DNS-rebinding / TOCTOU via fetch-time address resolution; fix merged ([PR #210](https://github.com/KnockOutEZ/wigolo/pull/210)).
 - **hermes-agent** (Nous Research) — hardened the auto-approve edit gate against a multi-file patch bypass; fix + regression tests submitted ([PR #63438](https://github.com/NousResearch/hermes-agent/pull/63438)).
+- **redis-py** — plaintext password disclosure via `ConnectionPool.__repr__` (CWE-532); fixed ([#3993](https://github.com/redis/redis-py/issues/3993)).
+- **tomlkit** — uncontrolled-recursion DoS in `parser.py` (CWE-674); fixed ([#459](https://github.com/python-poetry/tomlkit/issues/459)).
 
 ## Reverse Engineering & Platform Research
 
 - **Android / Pixel** — vulnerability research submitted to Google's Android & Devices VRP (Buganizer): firmware reverse engineering, kernel/driver, and device trust-boundary work.
 - **Windows** — local privilege escalation and kernel/driver research (MSRC; ZDI pipeline).
 - **Focus areas** — memory corruption, TOCTOU / logic flaws, cryptanalysis, firmware RE.
-
-## Reported & Fixed
-
-Security issues reported and fixed upstream — accepted and patched by maintainers:
-
-- **redis-py** — plaintext password disclosure via `ConnectionPool.__repr__` (CWE-532) — [#3993](https://github.com/redis/redis-py/issues/3993), fixed
-- **tomlkit** — uncontrolled-recursion DoS in `parser.py` (CWE-674) — [#459](https://github.com/python-poetry/tomlkit/issues/459), fixed
 
 ---
 
