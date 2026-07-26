@@ -16,13 +16,15 @@ Vulnerability research and reverse engineering across open-source developer tool
 | [GHSA-4cfr-w3v5-w5j5](https://github.com/Dicklesworthstone/destructive_command_guard/security/advisories/GHSA-4cfr-w3v5-w5j5) | **High · 7.1** | Algorithmic-complexity fail-open guard bypass | destructive_command_guard |
 | [GHSA-25rm-9wvm-m38v](https://github.com/aszepieniec/falcon-rust/security/advisories/GHSA-25rm-9wvm-m38v) | **Medium · 5.9** | Post-quantum cryptography — discrete-Gaussian sampler precision below Falcon's security threshold | falcon-rust |
 
-<sub>CVE IDs pending assignment. Additional advisories are in coordinated disclosure and will be listed here once published.</sub>
+<sub>No CVE IDs assigned — GitHub issues these when a maintainer requests one for a repository advisory. Further advisories are in coordinated disclosure and will be listed here once published.</sub>
 
 ## Upstream Security Fixes
 
 Defects found, reported, and fixed upstream — credited by maintainers via commit, PR, or issue. The reporting channel differs from the advisories above; the work does not.
 
+- **falcon-rust** — beyond the advisory above: authored both fixes and am listed among the repo's [contributors](https://github.com/aszepieniec/falcon-rust/graphs/contributors). After the initial fix shipped I re-checked it against the specification, found it still short of the required precision, reported that as well, and wrote the follow-up fix (`ffSampling` moved to `FixedPoint128`, released in v0.3.0).
 - **libpqc-dyber** (Dyber, post-quantum crypto) — reported an FN-DSA / Falcon `BerExp` sampler precision violation (the `exp(-x)` approximation fell below the ~2⁻⁴⁰ Rényi-divergence floor the security proof requires), plus constant-time hardening; fixed and credited as reporter ([commit `b012e00`](https://github.com/dyber-pqc/libpqc-dyber/commit/b012e00)).
+- **PyJWT** — flagged that `HMACAlgorithm.prepare_key` accepted empty HMAC keys with only a warning; 2.13.0 now rejects them outright with `InvalidKeyError`, [crediting me in the changelog](https://github.com/jpadilla/pyjwt/blob/master/CHANGELOG.rst).
 - **wigolo** (KnockOutEZ — local-first web-fetch MCP for AI agents) — hardened an SSRF fetch path against DNS-rebinding / TOCTOU via fetch-time address resolution; fix merged ([PR #210](https://github.com/KnockOutEZ/wigolo/pull/210)).
 - **hermes-agent** (Nous Research) — hardened the auto-approve edit gate against a multi-file patch bypass; fix + regression tests submitted ([PR #63438](https://github.com/NousResearch/hermes-agent/pull/63438)).
 - **redis-py** — plaintext password disclosure via `ConnectionPool.__repr__` (CWE-532); fixed ([#3993](https://github.com/redis/redis-py/issues/3993)).
