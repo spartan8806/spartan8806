@@ -19,6 +19,22 @@ Vulnerability research and reverse engineering across open-source developer tool
 
 <sub>CVE IDs are issued by GitHub after a compliance review of the published advisory, on their own schedule — CVE-2026-73222 was assigned four weeks after publication. The remaining advisories are in that queue. Further reports are in coordinated disclosure and will be listed here once published.</sub>
 
+## Research Tooling
+
+[**falcon-sampler-kat**](https://github.com/spartan8806/falcon-sampler-kat) — known-answer test vectors that detect a Falcon implementation whose `exp()` approximation is under-provisioned, the defect class behind the falcon-rust advisory above.
+
+**The official Falcon KATs do not catch this class.** A sampler running at ~2⁻³³ precision instead of the reference's ~2⁻⁵⁰ still reproduces every published test vector, because the defect only flips a rejection decision about 2⁻³³ of the time, so catching it end-to-end would take ~2³³ samples. These vectors test the arithmetic directly, at the point where the error is deterministic rather than probabilistic, and are built by construction rather than by search.
+
+Validated in both directions, which is the part that matters for a test suite:
+
+| implementation | result |
+|---|---|
+| falcon-rust v0.3.0 (post-fix) | 20/20 agree |
+| falcon-rust v0.1.3 (the GHSA-25rm defect) | **10/20 caught the defect** |
+| `pornin/rust-fn-dsa` v0.4.0, `flr_native` and `flr_emu` | 20/20 agree, `z` bit-exact |
+
+The vectors were [merged into falcon-rust](https://github.com/aszepieniec/falcon-rust/pull/15) at the maintainer's invitation.
+
 ## Upstream Security Fixes
 
 Defects found, reported, and fixed upstream — credited by maintainers via commit, PR, or issue. The reporting channel differs from the advisories above; the work does not.
