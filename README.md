@@ -16,8 +16,9 @@ Vulnerability research and reverse engineering across open-source developer tool
 | [GHSA-4cfr-w3v5-w5j5](https://github.com/Dicklesworthstone/destructive_command_guard/security/advisories/GHSA-4cfr-w3v5-w5j5) | — | **High · 7.1** | Algorithmic-complexity fail-open guard bypass | destructive_command_guard |
 | [GHSA-cff8-4h3c-9r4q](https://github.com/avo-hq/avo/security/advisories/GHSA-cff8-4h3c-9r4q) | — | **High · 8.5** | Cross-resource IDOR — `MediaLibraryController` exposes every `ActiveStorage::Blob` to any authenticated user | avo |
 | [GHSA-25rm-9wvm-m38v](https://github.com/aszepieniec/falcon-rust/security/advisories/GHSA-25rm-9wvm-m38v) | — | **Medium · 5.9** | Post-quantum cryptography — discrete-Gaussian sampler precision below Falcon's security threshold | falcon-rust |
+| [GHSA-2697-fm9m-mqvw](https://github.com/NationalSecurityAgency/ghidra/security/advisories/GHSA-2697-fm9m-mqvw) | — | **Medium · 5.5** | Infinite loop (uncontrolled resource consumption) in the PEF loader — a crafted PEF header hangs Ghidra on import | **Ghidra** (NSA) |
 
-<sub>CVE IDs are issued by GitHub after a compliance review of the published advisory, on their own schedule — CVE-2026-73222 was assigned four weeks after publication. The remaining advisories are in that queue. Further reports are in coordinated disclosure and will be listed here once published.</sub>
+<sub>CVE IDs are issued by GitHub after a compliance review of the published advisory, on their own schedule — CVE-2026-73222 was assigned four weeks after publication. Most of the remaining advisories are in that queue; the Ghidra advisory is not, as the Ghidra Team's policy states they are not authorized to generate CVEs. Further reports are in coordinated disclosure and will be listed here once published.</sub>
 
 ## Research Tooling
 
