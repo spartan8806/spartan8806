@@ -11,6 +11,7 @@
 | [GHSA-qq8c-fch4-cxq7](https://github.com/us/crw/security/advisories/GHSA-qq8c-fch4-cxq7) | — | **High · 7.3** | Broken access control — admin/metrics routes bypass API-key auth + permissive CORS | crw (fastCRW) |
 | [GHSA-4cfr-w3v5-w5j5](https://github.com/Dicklesworthstone/destructive_command_guard/security/advisories/GHSA-4cfr-w3v5-w5j5) | — | **High · 7.1** | Algorithmic-complexity fail-open guard bypass | destructive_command_guard |
 | [GHSA-cff8-4h3c-9r4q](https://github.com/avo-hq/avo/security/advisories/GHSA-cff8-4h3c-9r4q) | — | **High · 8.5** | Cross-resource IDOR — `MediaLibraryController` exposes every `ActiveStorage::Blob` to any authenticated user | avo |
+| [GHSA-fwh8-wcr5-q65c](https://github.com/redboltz/async_mqtt/security/advisories/GHSA-fwh8-wcr5-q65c) | — | **Medium · 6.5** | Out-of-bounds read in the v5 CONNACK parser — the resulting length underflow disables the property-length bounds check | async_mqtt |
 | [GHSA-25rm-9wvm-m38v](https://github.com/aszepieniec/falcon-rust/security/advisories/GHSA-25rm-9wvm-m38v) | **CVE-2026-77382** | **Medium · 5.9** | Post-quantum cryptography — discrete-Gaussian sampler precision below Falcon's security threshold | falcon-rust |
 | [GHSA-2697-fm9m-mqvw](https://github.com/NationalSecurityAgency/ghidra/security/advisories/GHSA-2697-fm9m-mqvw) | — | **Medium · 5.5** | Infinite loop (uncontrolled resource consumption) in the PEF loader — a crafted PEF header hangs Ghidra on import | **Ghidra** (NSA) |
 
