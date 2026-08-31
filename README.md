@@ -14,8 +14,10 @@
 | [GHSA-fwh8-wcr5-q65c](https://github.com/redboltz/async_mqtt/security/advisories/GHSA-fwh8-wcr5-q65c) | — | **Medium · 6.5** | Out-of-bounds read in the v5 CONNACK parser — the resulting length underflow disables the property-length bounds check | async_mqtt |
 | [GHSA-25rm-9wvm-m38v](https://github.com/aszepieniec/falcon-rust/security/advisories/GHSA-25rm-9wvm-m38v) | **CVE-2026-77382** | **Medium · 5.9** | Post-quantum cryptography — discrete-Gaussian sampler precision below Falcon's security threshold | falcon-rust |
 | [GHSA-2697-fm9m-mqvw](https://github.com/NationalSecurityAgency/ghidra/security/advisories/GHSA-2697-fm9m-mqvw) | — | **Medium · 5.5** | Infinite loop (uncontrolled resource consumption) in the PEF loader — a crafted PEF header hangs Ghidra on import | **Ghidra** (NSA) |
+| [GHSA-5frc-8c8j-rcvf](https://github.com/bee-san/Ciphey/security/advisories/GHSA-5frc-8c8j-rcvf) | — | **Medium · 5.5** | Unbounded Brainfuck interpreter — a crafted non-terminating program hangs the whole process (CWE-835) | Ciphey |
+| [GHSA-r9cf-pw6p-wg4j](https://github.com/sysrepo/sysrepo/security/advisories/GHSA-r9cf-pw6p-wg4j) | — | **Low · 2.9** | Buffer underread in `sr_xpath_node_name()` — an empty xpath reads before the start of the buffer (CWE-786) | sysrepo |
 
-<sub>CVE IDs are issued by GitHub after a compliance review of the published advisory, on their own schedule, and the lag is measured in weeks rather than days: CVE-2026-73222 was assigned four weeks after publication, and CVE-2026-77382 five. The remaining advisories are in that queue; the Ghidra advisory is not, as the Ghidra Team's policy states they are not authorized to generate CVEs. Further reports are in coordinated disclosure and will be listed here once published.</sub>
+<sub>CVE IDs are issued by GitHub after a compliance review of the published advisory, on their own schedule, and the lag is measured in weeks rather than days: CVE-2026-73222 was assigned four weeks after publication, and CVE-2026-77382 five. The remaining advisories are in that queue; the Ghidra advisory is not, as the Ghidra Team's policy states they are not authorized to generate CVEs. The Ciphey maintainer has requested a CVE for GHSA-5frc-8c8j-rcvf directly. Further reports are in coordinated disclosure and will be listed here once published.</sub>
 
 ## Research Tooling
 
