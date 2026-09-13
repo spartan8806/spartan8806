@@ -8,6 +8,7 @@
 |---|---|---|---|---|
 | [GHSA-79wm-x847-7cvg](https://github.com/davila7/claude-code-templates/security/advisories/GHSA-79wm-x847-7cvg) | **CVE-2026-73222** | **High · 8.8** | Unauthenticated OS command injection → RCE | claude-code-templates |
 | [GHSA-6c66-jp8x-q8w8](https://github.com/marcusquinn/aidevops/security/advisories/GHSA-6c66-jp8x-q8w8) | — | **High · 7.6** | Unauthenticated `0.0.0.0` bind + fail-open auth → SSRF proxy / process spawn | aidevops |
+| [GHSA-pp4f-p2jh-8rjw](https://github.com/troglobit/uftpd/security/advisories/GHSA-pp4f-p2jh-8rjw) | — | **High · 7.5** | Unauthenticated remote crash in the TFTP server — a `size_t` underflow in `parse_RWRQ()` and a NULL `FILE*` in `handle_DATA()`, both reachable from a **2-byte UDP packet** (CWE-191, CWE-125, CWE-476; `>= 1.7, <= 2.16`, fixed in 2.17) | **uftpd** |
 | [GHSA-qq8c-fch4-cxq7](https://github.com/us/crw/security/advisories/GHSA-qq8c-fch4-cxq7) | — | **High · 7.3** | Broken access control — admin/metrics routes bypass API-key auth + permissive CORS | crw (fastCRW) |
 | [GHSA-4cfr-w3v5-w5j5](https://github.com/Dicklesworthstone/destructive_command_guard/security/advisories/GHSA-4cfr-w3v5-w5j5) | **CVE-2026-77474** | **High · 7.1** | Algorithmic-complexity fail-open guard bypass | destructive_command_guard |
 | [GHSA-cff8-4h3c-9r4q](https://github.com/avo-hq/avo/security/advisories/GHSA-cff8-4h3c-9r4q) | — | **High · 8.5** | Cross-resource IDOR — `MediaLibraryController` exposes every `ActiveStorage::Blob` to any authenticated user | avo |
